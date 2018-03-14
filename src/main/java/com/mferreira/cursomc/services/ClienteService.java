@@ -27,6 +27,9 @@ import com.mferreira.cursomc.services.exceptions.ObjectNotFoundException;
 public class ClienteService {
 
 	@Autowired
+	private BCryptPasswordEncoder pe;
+	
+	@Autowired
 	private ClienteRepository repo;
 	
 	@Autowired
@@ -34,10 +37,7 @@ public class ClienteService {
 	
 	@Autowired
 	private EnderecoRepository enderecoRepository;
-	
-	@Autowired
-	private BCryptPasswordEncoder pe;
-	
+		
 	public Cliente find(Integer id) {
 		Cliente obj = repo.findByClienteId(id);
 		if(obj == null) {
