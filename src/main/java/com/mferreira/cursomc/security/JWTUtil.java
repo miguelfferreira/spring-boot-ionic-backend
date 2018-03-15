@@ -28,7 +28,7 @@ public class JWTUtil {
 	
 	public boolean tokenValido(String token) {
 		Claims claims = getClaims(token);
-		if(claims != null) {
+		if (claims != null) {
 			String username = claims.getSubject();
 			Date expirationDate = claims.getExpiration();
 			Date now = new Date(System.currentTimeMillis());
@@ -41,7 +41,7 @@ public class JWTUtil {
 
 	public String getUsername(String token) {
 		Claims claims = getClaims(token);
-		if(claims != null) {
+		if (claims != null) {
 			return claims.getSubject();
 		}
 		return null;
