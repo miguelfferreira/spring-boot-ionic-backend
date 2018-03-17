@@ -1,6 +1,9 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
+application.properties
+*.properties
+
 ### STS ###
 .apt_generated
 .classpath
@@ -22,5 +25,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
-*.properties
